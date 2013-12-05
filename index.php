@@ -1,14 +1,12 @@
-//shopping cart app
-
 <?php
 
 session_start();
 
-require("connection.php");
+require("connection3.php");
 
 if(isset($_GET['page'])){
 
-	$pages=array("products", "cart");
+	$pages=array("products", "cart", "checkout", "checkoutDb");
 
 	if(in_array($_GET['page'], $pages)) {
 
@@ -84,7 +82,8 @@ if(isset($_GET['page'])){
 				?>
 
 				<hr />
-				<a href="index.php?page=cart">Go to cart</a>
+				<a href="index.php?page=cart">Go to cart</a><br />
+				<a href="index.php?page=checkout">Go to checkout</a>
 			<?php 
 
 			}else{

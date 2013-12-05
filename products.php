@@ -18,7 +18,7 @@
 				$row_s=mysql_fetch_array($query_s);
 
 				$_SESSION['cart'][$row_s['id_product']]=array(
-					"quantitiy" => 1,
+					"quantity" => 1,
 					"price" => $row_s['price']
 					);
 
@@ -44,6 +44,7 @@
 
 <table>
 	<tr>
+		<th>Image</th>
 		<th>Name</th>
 		<th>Description</th>
 		<th>Price</th>
@@ -60,6 +61,7 @@
 	?>
 
 	<tr>
+		<td align="center"><img src = "<?php echo $row['images'] ?>" height="75" width="75"></td>
 		<td><?php echo $row['name'] ?></td>
 		<td><?php echo $row['description'] ?></td>
 		<td>$<?php echo $row['price'] ?></td>

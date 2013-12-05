@@ -7,7 +7,6 @@
 				unset($_SESSION['cart'][$key]);
 			}else{
 				$_SESSION['cart'][$key]["quantity"]=$val;
-
 			}
 		}
 
@@ -24,7 +23,7 @@
 			<th>Name</th>
 			<th>Quantity</th>
 			<th>Price</th>
-			<th>Item Price</th>
+			<th>Subtotal</th>
 		</tr>
 
 		<?php
@@ -57,14 +56,12 @@
 			?>
 
 			<tr>
-			<td>Total Price: <?php echo $totalprice ?></td>
+				<td></td>
+				<td><button type="submit" name="submit">Update Cart</button></td>
+				<td></td>
+			<td><h3>Total Price: $<?php echo $totalprice ?></h3></td>
 			</tr>
-
-
 	</table>
-	<br />
-	<button type="submit" name="submit">Update Cart</button>
-
 
 </form>
 
